@@ -1,0 +1,4 @@
+bin , binary yani çalıştıralbilir dosyaların bulundugu bir klasördür.
+include baslik dosyalarinin bulundugu klasördür.
+lib kütüphane dosyalarının , nesne dosyalarinin bulundugu bir klasördür
+src de kaynak dosyalarinin bulundugu klasördür.

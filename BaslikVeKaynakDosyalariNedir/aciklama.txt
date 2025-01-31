@@ -1,0 +1,21 @@
+bir  A.cpp dosyamiz varsa bunu derlediğimizde A.o dosyasi olusur
+
+bir baska Test.cpp dosyasinda bunu kullanmak istersek A.o ve A.cpp dosyalarini vermek zorundayiz
+
+buradaki sorun aslinda A.o dosyasinda bir tanimlama yok ve tanimlama bulunmadigi icim
+Test.cpp de A.o kutuphanesini kullanmaya calistiginda A.cpp yi de vermemiz gerekir o zaman tanimlamalari vermek icin.
+dolayisiyla kaynak kodu vermiş oluruz. ve bu sayede Test.ex olusturulur.
+ama biz kaynak kodu vermek istemiyoruz ve aslında yapmak istedigimiz sey tanımı gerçekleştirimden ayırabilmektir.
+
+biz bunu dogru bir sekilde nasi yapariz ? 
+Elimzideki A.cpp dosyasini A.hpp(baslik) ve A.cpp(kaynak) dosyalari seklinde ayiriyoruz.
+bunu derledigimizde ikisini birden A.o olusucak.
+Ama bu sefer kaynak kodum A.cpp de, ve sadece tanimlamalarin bulundugu hpp baslik dosyam var.
+asil işi yapoan kisim metotların gövdeleri cpp dosyasinda, tanimlamalar ise hpp dosyasinda olur.
+
+ben diyelim Test.cpp de kullanmak istiyorum o zaman;
+A.hpp baslik dosyamla az önceki derlemeden olusan A.o kütüphanemi Test.cpp de kullanicam
+Test.cpp bunlari kullanarak Test.exe olusturucak
+
+
+

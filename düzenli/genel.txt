@@ -1,0 +1,20 @@
+yığının avantajlari 
+    tasarlanmasi cok kolay
+    veriler sıkışık,önbellek dostu(daha hızlı)
+    hata ihtiamli düşük
+    stacki derleyici yönetir.
+dezavantajlari
+    kontrol derleyicidedir, her şeye izin vermiyor
+    verileirn yaşam süresini kontrol edemeyiz
+    sıkışık yapisi , calısma anındaki dinamik boyutlu istekleri engeller.
+   Değişken etki alanı:
+
+
+int *sayilar = new int[boyut];
+delete[] sayilar;
+
+
+
+
+
+
