@@ -1,0 +1,34 @@
+Insertion Sort Nedir?
+Insertion Sort, bir sıralama algoritmasıdır. İsmini, sıralanacak listeyi sanki elinizdeki bir deste kartı sıralıyormuş gibi ele almasından alır. 
+Her adımda, sıralanacak bir sonraki elemanı alır ve bu elemanı, sıralanmış listeye doğru konumuna “yerleştirir”. Bu işlem, tüm liste sıralanana kadar devam eder.
+
+Python’da Insertion Sort Uygulaması
+Python dilinde Insertion Sort algoritmasının uygulaması aşağıdaki gibidir:
+
+def insertion_sort(liste):
+    for i in range(1, len(liste)):
+        anahtar = liste[i]
+        j = i-1
+        while j >=0 and anahtar < liste[j] :
+                liste[j+1] = liste[j]
+                j -= 1
+        liste[j+1] = anahtar
+
+
+Bu kodda, `i` döngü değişkeni sıralanacak olan sonraki elemanın indeksini tutar.
+ `Anahtar` değişkeni ise sıralanacak olan sonraki elemanın değerini tutar.
+ `j` değişkeni, sıralanmış listeyi tarar ve `anahtar` değerinin yerleştirileceği konumu bulur.
+
+Algoritmanın Görsel Örneği
+Bu bölümde, Insertion Sort algoritmasının bir dizi üzerindeki değişiminin görsel örneğini sunacağım.
+ Bu örnekte, `[8, 5, 2, 9, 5, 6, 3]` dizisini sıralayacağız.
+ İlk adım: [8 | 5 2 9 5 6 3]
+İkinci adım: [5 8 | 2 9 5 6 3]
+Üçüncü adım: [2 5 8 | 9 5 6 3]
+Dördüncü adım: [2 5 8 9 | 5 6 3]
+Beşinci adım: [2 5 5 8 9 | 6 3]
+Altıncı adım: [2 5 5 6 8 9 | 3]
+Yedinci adım: [2 3 5 5 6 8 9 |]
+
+Bu örnekte, her adımda “|” işareti, sıralanmış kısmı ve sıralanmamış kısmı ayırır. Her adımda, sıralanmamış kısmın ilk elemanı, sıralanmış kısmın uygun yerine eklenir.
+ Bu işlem, sıralanmamış kısım boş kalana kadar devam eder.

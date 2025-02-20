@@ -1,0 +1,47 @@
+Bubble Sort Nedir?
+Bubble sort, en basit sıralama algoritmalarından biridir. Karşılaştırma temelli olan bu algoritmada, listedeki her bir eleman yanındaki eleman ile karşılaştırılır. Eğer ilk elemanın değeri, ikinci elemanın değerinden büyükse, iki eleman yer değiştirir. Daha sonra ikinci ve üçüncü elemanların değerleri karşılaştırılır. İkinci elemanın değeri üçüncü elemanın değerinden büyükse bu iki eleman yer değiştirir ve bu işlem, tüm liste sıralanana kadar bu şekilde devam eder.
+
+Bubble Sort Algoritması Nasıl Çalışır?
+Örneğin yukarıda belirtilen listeyi ele alalım. [3,10,5,12,9,20]. Bubble sort kullanarak bu listeyi sıralayacak olursak eğer; Karşılaştırmaya öncelikle 3 ve 10 değerlerinin karşılaştırılması ile başlanır. 3, 10'dan küçük olduğu için yer değiştirmezler. Daha sonrasında 10 ve 5 değerleri karşılaştırılır. 10 5'ten büyük olduğu için yer değiştirirler ve iterasyon işlemleri bu şekilde liste elemanları sıralanana kadar devam eder.
+
+Iterasyon : [3,5,10,9,12,20] → [3,5,10,9,12,20] → [3,5,10,9,12,20] → [3,5,9,10,12,20] → [3,5,9,10,12,20]
+Iterasyon : [3,5,9,10,12,20] → [3,5,9,10,12,20] → [3,5,9,10,12,20] → [3,5,9,10,12,20] → [3,5,9,10,12,20] → [3,5,9,10,12,20]
+Bu örneğimizde, 2 iterasyon gerçekleştirdikten sonra array elemanları sıralanmış olur.
+
+
+
+mesela dizi 2 7 4 1 5 3 ise bir gezinimde
+
+        2 4 1 5 3 7 
+        2 1 4 3 5 7
+        1 2 3 4 5 7
+
+
+
+
+
+pseudo kod
+for i = 1 to n -1 
+{   
+    // j aslinda her donguye girdiginde sifirdan basliyor tekrar tariyor unutma. for ile oldugu icin pek belli olmamıs
+    for j = 0 to n - 1 - i
+    {
+        int flag = 0;
+        if(a[j] > a[j + 1])
+         {
+             swap(a[j] , a[j+1])
+             flag = 1;
+         }
+         if(flag == 0)
+         {
+            // demek ki hic degisim olmadı o zaman tamamiyle sırali halde.
+            break;
+         }
+}
+
+}
+
+
+mesela her seferinde sıralanmıs ksıımları tekra ryapmamıza gerek yok.o yüzden içerideki donguyu her seferinde i(dıs dongu) azaltabiliriz yani 1 azaltiriz aslinda n-1 di n-2 kez doner 2.sinde
+o yüzden n -1 - i diyebiliriz.
+// aslinda son kisimlari tekrardan bakmamak icin yapiyoruz.

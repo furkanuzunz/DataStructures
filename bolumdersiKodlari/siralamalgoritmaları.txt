@@ -1,0 +1,15 @@
+siralama algoritmalarini belirli şeylere göre siniflandiririz.
+1-time complexity
+----> bir algoritmanın girdi boyutuna göre aldıgı zamanın büyüme oranının ölçüsü olan zaman karmaşıklığıdır.
+
+2- Space complexity or Memory Usage
+----->bazıları sabit memory kullanir, bazilari ise ekstra bellek kullanir vs
+
+3-Stability
+----->farklı çıktılarda aynı kararlılığı gösterebilmesi
+
+4-Internal sort(dahili) vs External sort(harici)
+-----> all records in main memory or RAM //// records are on disk / tapes
+5- recursive or non-recursive
+----> quick sort,merge sort = recursivedir.
+----> insertion sort,selection sort,

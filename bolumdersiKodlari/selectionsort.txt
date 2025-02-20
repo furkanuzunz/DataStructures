@@ -1,0 +1,48 @@
+2 | 7 | 4 | 1 | 5 | 3 bu A dizisi
+
+1-)minimum elemanı bulucaz.ve ilk indeksimizle yer degistiricez
+
+şöyle oldu:::    1 | 7 | 4 | 2 | 5 | 3
+cunku 1 in yeri orası
+
+1-) simdi 1 den sonraki minimum elemanı bulucaz.
+o da 2 dir. biz ise 1.indeksteydik yani 7 ile 2 yer degisir.
+şöyle olur :    1 | 2 | 4 | 7 | 5 | 3
+
+ve böyle böyle siralanir.
+
+1 | 2 | 4 | 7 | 5 | 3
+
+1 | 2 | 3 | 7 | 5 | 4
+
+1 | 2 | 3 | 4 | 5 | 7
+
+1 | 2 | 3 | 4 | 5 | 7   en son böyle olur.
+
+--pseudo kod--
+
+SelectionSort(A,n)  // a dizi, n uzunluğu
+{
+    for i = 0 to n - 1  // bu dongunun her yinelenmesinde min elemanının i pozisyonuna ayarlayacağiz.
+    {// en minimumu bulup o anki i indeksine yani 0 ıncı indekse koycaz.
+    // baslangicta yapabileceğimiz şey min elemanin , i ninci indekse olmasi aslinda.
+    min_i  = i;
+        for j = i +  1 to n - 1 
+        {
+            if ( A[j] < A[min_i])
+                min_i = j;
+        }
+        // o anki i indeksindeki elemandan minini buldıysak simdi onu swaplamamız lazım
+        temp = a[i]
+        a[i] = a[min_i];
+        a[min_i] = temp; // minimum elemani a[i] deki deger yaptık. a[i] yi ise zaten j indeksine guncelledik 33.satirda
+
+
+    }
+
+}
+
+
+
+
+
