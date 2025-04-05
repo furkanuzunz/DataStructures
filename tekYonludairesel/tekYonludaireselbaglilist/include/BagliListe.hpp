@@ -2,20 +2,22 @@
 #define BagliListe_hpp
 
 #include "Dugum.hpp"
-using namespace std;
+
 class BagliListe
 {
     public:
         BagliListe();
         ~BagliListe();
-
-        void ekle(int veri);
+        void ekle (int veri);
 
         void yazdir();
         void cikar();
     private:
-        Dugum* ilk;
-
+        Dugum *ilk;
+        int dugumSayisi;
 };
+
+
+
 
 #endif

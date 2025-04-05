@@ -1,7 +1,7 @@
-#include "Bagliliste.hpp"
+#include "BagliListe.hpp"
 #include <iostream>
 #include <iomanip>
-
+using namespace std;
 BagliListe::BagliListe()
 {
     ilk = 0;
@@ -33,7 +33,7 @@ void BagliListe::ekle(int veri)
     // dugumun adresini yeni denilen işaretçiye yerleştirdik
     if (ilk == 0)
     {
-        ilk yeni;
+        ilk = yeni;
         return;
     }
     // hicbir düğümün olmadıgı durumda da yeni dugum ilk dugum olacaktır ve fonksiyon sonlanacaktır.
@@ -75,19 +75,18 @@ void BagliListe::yazdir()
 void BagliListe::cikar()
 {
     if(ilk == 0)
-        return 
+        return;
     
     if(ilk->sonraki == 0)
     {
         // ilk->sonraki = 0 ise zaten bir tek ilk vardır onu sileriz.
         delete ilk;
-        ilk =0 0;
+        ilk =0;
     }
-
     else
     {
         Dugum *gecici = ilk;
-        while(gecici->sonraki != 0)
+        while(gecici->sonraki->sonraki != 0)
         {
             gecici = gecici->sonraki;
         }

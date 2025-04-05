@@ -1,13 +1,12 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
 #include "BagliListe.hpp"
+
 using namespace std;
-
-
 
 int main()
 {
-    BagliListe* liste = new BagliListe();
+    BagliListe *liste = new BagliListe();
 
     liste->ekle(11);
     liste->ekle(22);
@@ -19,5 +18,4 @@ int main()
 
     liste->cikar();
     liste->yazdir();
-
 }

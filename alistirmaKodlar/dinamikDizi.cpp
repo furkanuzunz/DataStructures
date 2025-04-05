@@ -71,32 +71,16 @@ public:
             {
                 genislet(m_boyut);
             }
-            for (int i = m_kullanilan - 1;i >= nereye;i--)// -1 in sebebi en sona kopyaladigimizda altta i + 1 diyoruz ama var değil orasi.
+            for (int i = m_kullanilan;i >= nereye;i--)
             {           
                 m_adres[i + 1] = m_adres[i]; //bir sonraki elemana öncekini kopyaladık ve böylelikle kaydi sağa doğru.
             }
             m_adres[nereye] = veri;
             m_kullanilan++;
         }
-        else
-        {
-            throw out_of_range("sira hatasi");
-        }
-    }
-    void cikar(int nereden)
-    {
-     if(nereden >= 0 && m_kullanilan > 0 && nereden < m_kullanilan)
-     {  
-        for(int i = nereden ; i < m_kullanilan - 1;i++)
-        {
-            m_adres[i] = m_adres[i+1]; //artik i indeksinde i+1 indeksindeki eleman var o i indeksindeki gitti.
-        }
-        m_kullanilan--;
 
-     }
-     else
-        throw out_of_range("cikar() : sira hatasi");
     }
+
 
     friend ostream &operator<<(ostream &os, const DinamikDizi &diziNesne)
     {
@@ -153,10 +137,7 @@ int main()
         }
         else if(secim == 3)
         {
-            int neredem;
-            cout << "sira:"<<endl;
-            cin >> nereden;
-            dizi.cikar(nereden);
+
         }
         else
         {

@@ -9,4 +9,3 @@ Dugum::Dugum(int veri) // kurucunun icerigini yazdik
 // Dugum.cpp dosyasında ise fonksiyonun içeriği tanımlanır.
 // Böylece Dugum.hpp dosyası kısa ve okunaklı kalır.
 
-#endif
